@@ -67,7 +67,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
                 scale: _textScaleAnimation,
                 child: const Text('HOME', style: AppStyles.f58WhiteBold),
               ),
-              const SizedBox(height: 8),
+
               ScaleTransition(
                 scale: _textScaleAnimation,
                 child: Text(
