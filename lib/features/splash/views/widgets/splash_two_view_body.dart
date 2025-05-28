@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_decor/core/utils/app_colors.dart';
 import 'package:home_decor/core/utils/app_styles.dart';
 import 'package:home_decor/core/utils/assets.dart';
+import 'package:home_decor/core/utils/custom_button.dart';
 
 class SplashTwoViewBody extends StatefulWidget {
   const SplashTwoViewBody({super.key});
@@ -82,6 +84,24 @@ class _SplashTwoViewBodyState extends State<SplashTwoViewBody>
                     color: AppColors.primaryColor,
                   ),
                 ),
+              ),
+              90.verticalSpace,
+              CustomButton(
+                backgroundColor: AppColors.primaryColor,
+                onPressed: () {},
+                text: 'Log In',
+                fontSize: 21.sp,
+                fontWeight: FontWeight.bold,
+                textColor: AppColors.vinous,
+              ),
+              7.verticalSpace,
+              CustomButton(
+                backgroundColor: AppColors.lightVinous,
+                onPressed: () {},
+                text: 'Sign Up',
+                fontSize: 21.sp,
+                fontWeight: FontWeight.bold,
+                textColor: AppColors.lightPrimaryColor,
               ),
             ],
           ),

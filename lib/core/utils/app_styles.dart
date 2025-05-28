@@ -13,4 +13,9 @@ abstract class AppStyles {
     fontWeight: FontWeight.w400,
     color: Colors.white,
   );
+
+  static const TextStyle f20Bold = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  );
 }
