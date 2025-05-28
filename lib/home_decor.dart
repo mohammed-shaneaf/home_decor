@@ -13,7 +13,7 @@ class HomeDecor extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: onGenerateRoute,
-        initialRoute: RouterName.splash,
+        initialRoute: RouterName.splashone,
       ),
     );
   }

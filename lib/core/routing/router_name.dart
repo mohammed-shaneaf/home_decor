@@ -1,3 +1,4 @@
 class RouterName {
-  static const String splash = 'splashview';
+  static const String splashone = 'splashone';
+  static const String splashtwo = 'splashtwo';
 }
