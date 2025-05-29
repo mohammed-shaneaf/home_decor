@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_decor/core/utils/app_colors.dart';
+import 'package:home_decor/core/utils/app_images.dart';
 import 'package:home_decor/core/utils/app_styles.dart';
-import 'package:home_decor/core/utils/assets.dart';
 import 'package:home_decor/core/utils/custom_button.dart';
 
 class SplashTwoViewBody extends StatefulWidget {
@@ -54,56 +54,59 @@ class _SplashTwoViewBodyState extends State<SplashTwoViewBody>
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: FadeTransition(
-        opacity: _fadeAnimation,
-        child: SlideTransition(
-          position: _slideAnimation,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SvgPicture.asset(Assets.assetsImagesLogoOrange),
-              const SizedBox(height: 24),
-              ScaleTransition(
-                scale: _textScaleAnimation,
-                child: Text(
-                  'HOME',
-                  style: AppStyles.f58WhiteBold.copyWith(
-                    color: AppColors.primaryColor,
+    return GestureDetector(
+      onTap: () {},
+      child: Center(
+        child: FadeTransition(
+          opacity: _fadeAnimation,
+          child: SlideTransition(
+            position: _slideAnimation,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SvgPicture.asset(Assets.assetsImagesLogoOrange),
+                const SizedBox(height: 24),
+                ScaleTransition(
+                  scale: _textScaleAnimation,
+                  child: Text(
+                    'HOME',
+                    style: AppStyles.f58WhiteBold.copyWith(
+                      color: AppColors.primaryColor,
+                    ),
                   ),
                 ),
-              ),
 
-              ScaleTransition(
-                scale: _textScaleAnimation,
-                child: Text(
-                  'DECOR',
-                  style: AppStyles.f41WhiteRegular.copyWith(
-                    letterSpacing: 12.0,
-                    height: 1.2,
-                    color: AppColors.primaryColor,
+                ScaleTransition(
+                  scale: _textScaleAnimation,
+                  child: Text(
+                    'DECOR',
+                    style: AppStyles.f41WhiteRegular.copyWith(
+                      letterSpacing: 12.0,
+                      height: 1.2,
+                      color: AppColors.primaryColor,
+                    ),
                   ),
                 ),
-              ),
-              90.verticalSpace,
-              CustomButton(
-                backgroundColor: AppColors.primaryColor,
-                onPressed: () {},
-                text: 'Log In',
-                fontSize: 21.sp,
-                fontWeight: FontWeight.bold,
-                textColor: AppColors.vinous,
-              ),
-              7.verticalSpace,
-              CustomButton(
-                backgroundColor: AppColors.lightVinous,
-                onPressed: () {},
-                text: 'Sign Up',
-                fontSize: 21.sp,
-                fontWeight: FontWeight.bold,
-                textColor: AppColors.lightPrimaryColor,
-              ),
-            ],
+                90.verticalSpace,
+                CustomButton(
+                  backgroundColor: AppColors.primaryColor,
+                  onPressed: () {},
+                  text: 'Log in',
+                  fontSize: 21.sp,
+                  fontWeight: FontWeight.bold,
+                  textColor: AppColors.vinous,
+                ),
+                15.verticalSpace,
+                CustomButton(
+                  backgroundColor: AppColors.lightVinous,
+                  onPressed: () {},
+                  text: 'Sign Up',
+                  fontSize: 21.sp,
+                  fontWeight: FontWeight.bold,
+                  textColor: AppColors.lightPrimaryColor,
+                ),
+              ],
+            ),
           ),
         ),
       ),

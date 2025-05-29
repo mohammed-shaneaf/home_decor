@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_decor/core/routing/router_name.dart';
+import 'package:home_decor/core/utils/app_images.dart';
 import 'package:home_decor/core/utils/app_styles.dart';
-import 'package:home_decor/core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -86,7 +86,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   Future<void> _navigateToNext() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 4));
     Navigator.pushReplacementNamed(context, RouterName.splashtwo);
   }
 }
