@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:home_decor/core/utils/app_images.dart';
+import 'package:home_decor/core/utils/build_dot.dart';
 import 'package:home_decor/features/on_boarding/views/widgets/on_boarding_page.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -21,7 +22,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
       'subtitle': 'Feel at home, wherever you are.',
     },
     {
-      'image': Assets.assetsImagesOnBoardingTwo,
+      'image': Assets.assetsImagesLivingRoom,
       'title': 'Modern Design',
       'subtitle': 'Sleek. Simple. Sophisticated.',
     },
@@ -68,7 +69,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               Row(
                 children: List.generate(
                   onboardingData.length,
-                  (index) => _buildDot(index == _currentPage),
+                  (index) => buildDot(index == _currentPage),
                 ),
               ),
               SizedBox(
@@ -105,18 +106,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildDot(bool isActive) {
-    return Container(
-      margin: EdgeInsets.only(right: 6.w),
-      height: 8.h,
-      width: isActive ? 24.w : 8.w,
-      decoration: BoxDecoration(
-        color: isActive ? const Color(0xFFE5978C) : Colors.grey.shade300,
-        borderRadius: BorderRadius.circular(8.r),
-      ),
     );
   }
 }

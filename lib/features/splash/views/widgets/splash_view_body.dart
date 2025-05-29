@@ -87,6 +87,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   Future<void> _navigateToNext() async {
     await Future.delayed(const Duration(seconds: 4));
-    Navigator.pushReplacementNamed(context, RouterName.splashtwo);
+    Navigator.pushReplacementNamed(context, RouterName.onBoarding);
   }
 }

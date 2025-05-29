@@ -19,15 +19,20 @@ class OnBoardingPage extends StatelessWidget {
     return Column(
       children: [
         Stack(
-          alignment: Alignment.topCenter,
+          clipBehavior: Clip.none,
           children: [
             Positioned(
-              top: 360.h,
+              top: 330.h - 20.h,
+              left: 0,
+              right: 0,
               child: Image.asset(
                 Assets.assetsImagesOnBoardingShadow,
-                width: 300.w,
+                width: double.infinity,
+                height: 100.h,
+                fit: BoxFit.fill,
               ),
             ),
+
             ClipRRect(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(32.r),
@@ -40,6 +45,7 @@ class OnBoardingPage extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
+
             Positioned(
               top: 50.h,
               right: 20.w,
@@ -62,6 +68,7 @@ class OnBoardingPage extends StatelessWidget {
             ),
           ],
         ),
+
         SizedBox(height: 40.h),
         Text(
           title,
