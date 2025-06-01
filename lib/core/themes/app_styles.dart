@@ -43,4 +43,10 @@ abstract class AppStyles {
     color: AppColors.black,
     fontFamily: 'Poppins',
   );
+
+  static const TextStyle f14Bold = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: 'Poppins',
+  );
 }
