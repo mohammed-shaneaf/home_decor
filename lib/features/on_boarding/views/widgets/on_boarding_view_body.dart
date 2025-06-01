@@ -22,7 +22,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
       'subtitle': 'Feel at home, wherever you are.',
     },
     {
-      'image': Assets.assetsImagesLivingRoom,
+      'image': Assets.assetsImagesOnBoardingTwo,
       'title': 'Modern Design',
       'subtitle': 'Sleek. Simple. Sophisticated.',
     },
