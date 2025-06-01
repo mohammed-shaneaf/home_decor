@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:home_decor/core/themes/app_colors.dart';
-import 'package:home_decor/core/themes/app_styles.dart';
 import 'package:home_decor/core/utils/custom_button.dart';
 import 'package:home_decor/features/Auth/views/widgets/custom_auth_app_bar.dart';
+import 'package:home_decor/features/Auth/views/widgets/dont_have_account.dart';
 import 'package:home_decor/features/Auth/views/widgets/login_form_operation.dart';
 import 'package:home_decor/features/Auth/views/widgets/sign_in_welcome.dart';
 
@@ -33,37 +32,12 @@ class SignInViewBody extends StatelessWidget {
                   child: CustomButton(onPressed: () {}, text: 'Log In'),
                 ),
                 50.verticalSpace,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Don\'t have an account? ',
-                      style: AppStyles.f14Regular.copyWith(
-                        color: AppColors.black,
-                      ),
-                    ),
-                    Text(
-                      'Sign Up',
-                      style: AppStyles.f14Regular.copyWith(
-                        color: AppColors.primaryColor,
-                      ),
-                    ),
-                  ],
-                ),
+                DontHaveAnAccount(),
               ],
             ),
           ),
         ],
       ),
     );
-  }
-}
-
-class DontHaveAnAccount extends StatelessWidget {
-  const DontHaveAnAccount({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
