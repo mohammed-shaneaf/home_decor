@@ -3,4 +3,5 @@ class RouterName {
   static const String splashtwo = 'splashtwo';
   static const String onBoarding = 'OnBoarding';
   static const String signinview = 'signinview';
+  static const String signupview = 'signupview';
 }

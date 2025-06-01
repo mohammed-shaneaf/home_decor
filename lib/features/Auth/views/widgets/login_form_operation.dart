@@ -13,11 +13,11 @@ class LoginFormOperation extends StatelessWidget {
       children: [
         Text('Username Or Email', style: AppStyles.f15Medium),
         8.verticalSpace,
-        CustomTextFormField(hintText: 'Enter Your Email'),
+        CustomTextFormField(hintText: 'Enter Your Email Or Username'),
         23.verticalSpace,
         Text('Password', style: AppStyles.f15Medium),
         8.verticalSpace,
-        CustomTextFormField(hintText: 'Password', obscureText: true),
+        CustomTextFormField(hintText: 'Enter Your Password', obscureText: true),
       ],
     );
   }

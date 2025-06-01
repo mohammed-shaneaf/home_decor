@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_decor/core/extensions/context_extensions.dart';
 import 'package:home_decor/core/themes/app_colors.dart';
 import 'package:home_decor/core/themes/app_styles.dart';
 
@@ -10,16 +11,29 @@ class CustomAuthAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
-        112.horizontalSpace,
-        Text(
-          text,
-          textAlign: TextAlign.center,
-          style: AppStyles.f20Bold.copyWith(color: AppColors.primaryColor),
-        ),
-      ],
+    return SizedBox(
+      height: 56.h,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              onPressed: () {
+                context.pop();
+              },
+              icon: Icon(Icons.arrow_back, color: AppColors.black, size: 24.sp),
+            ),
+          ),
+          Center(
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: AppStyles.f20Bold.copyWith(color: AppColors.primaryColor),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
