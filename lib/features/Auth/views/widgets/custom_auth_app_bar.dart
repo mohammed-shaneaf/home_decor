@@ -25,12 +25,10 @@ class CustomAuthAppBar extends StatelessWidget {
               icon: Icon(Icons.arrow_back, color: AppColors.black, size: 24.sp),
             ),
           ),
-          Center(
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-              style: AppStyles.f20Bold.copyWith(color: AppColors.primaryColor),
-            ),
+          Text(
+            text,
+            textAlign: TextAlign.center,
+            style: AppStyles.f20Bold.copyWith(color: AppColors.primaryColor),
           ),
         ],
       ),
