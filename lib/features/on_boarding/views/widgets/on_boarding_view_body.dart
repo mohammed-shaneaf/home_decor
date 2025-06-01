@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_decor/core/extensions/context_extensions.dart';
+import 'package:home_decor/core/themes/app_colors.dart';
 import 'package:home_decor/core/utils/app_images.dart';
-import 'package:home_decor/core/utils/build_dot.dart';
+import 'package:home_decor/core/widgets/build_dot.dart';
+import 'package:home_decor/features/Auth/views/sign_in_view.dart';
 import 'package:home_decor/features/on_boarding/views/widgets/on_boarding_page.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -79,15 +82,15 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                   onPressed: () {
                     if (_currentPage < onboardingData.length - 1) {
                       _pageController.nextPage(
-                        duration: const Duration(milliseconds: 300),
+                        duration: const Duration(milliseconds: 400),
                         curve: Curves.easeIn,
                       );
                     } else {
-                      // Navigate to home or auth
+                      context.push(SignInView());
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFE5978C),
+                    backgroundColor: AppColors.primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32.r),
                     ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_decor/core/routing/router_name.dart';
+import 'package:home_decor/features/Auth/views/sign_in_view.dart';
 import 'package:home_decor/features/on_boarding/views/on_boarding_view.dart';
 import 'package:home_decor/features/splash/views/splash_view.dart';
 
@@ -10,6 +11,9 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
 
     case RouterName.onBoarding:
       return MaterialPageRoute(builder: (context) => const OnBoardingView());
+
+    case RouterName.signinview:
+      return MaterialPageRoute(builder: (context) => const SignInView());
 
     default:
       return MaterialPageRoute(

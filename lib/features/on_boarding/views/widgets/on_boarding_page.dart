@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_decor/core/themes/app_colors.dart';
 import 'package:home_decor/core/utils/app_images.dart';
+import 'package:home_decor/core/themes/app_styles.dart';
 
 class OnBoardingPage extends StatelessWidget {
   final String image;
@@ -55,11 +57,7 @@ class OnBoardingPage extends StatelessWidget {
                     onTap: () {},
                     child: Text(
                       'Skip',
-                      style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: AppStyles.f14Regular.copyWith(color: Colors.black),
                     ),
                   ),
                   Icon(Icons.arrow_forward, size: 18.sp),
@@ -69,25 +67,17 @@ class OnBoardingPage extends StatelessWidget {
           ],
         ),
 
-        SizedBox(height: 40.h),
+        40.verticalSpace,
         Text(
           title,
-          style: TextStyle(
-            fontSize: 24.sp,
-            fontWeight: FontWeight.w600,
-            color: const Color(0xFFE5978C),
-          ),
+          style: AppStyles.f24Bold.copyWith(color: AppColors.primaryColor),
         ),
-        SizedBox(height: 12.h),
+        12.verticalSpace,
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: Text(
             subtitle,
-            style: TextStyle(
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w400,
-              color: Colors.black54,
-            ),
+            style: AppStyles.f14Regular,
             textAlign: TextAlign.center,
           ),
         ),

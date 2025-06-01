@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_decor/core/routing/router_name.dart';
 import 'package:home_decor/core/utils/app_images.dart';
-import 'package:home_decor/core/utils/app_styles.dart';
+import 'package:home_decor/core/themes/app_styles.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -65,14 +65,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
               const SizedBox(height: 24),
               ScaleTransition(
                 scale: _textScaleAnimation,
-                child: const Text('HOME', style: AppStyles.f58WhiteBold),
+                child: const Text('HOME', style: AppStyles.f58SemiBold),
               ),
 
               ScaleTransition(
                 scale: _textScaleAnimation,
                 child: Text(
                   'DECOR',
-                  style: AppStyles.f41WhiteRegular.copyWith(
+                  style: AppStyles.f41Regular.copyWith(
                     letterSpacing: 12.0,
                     height: 1.2,
                   ),
