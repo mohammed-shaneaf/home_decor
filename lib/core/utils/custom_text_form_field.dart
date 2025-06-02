@@ -16,6 +16,8 @@ class CustomTextFormField extends StatefulWidget {
     this.onChanged,
     this.onTap,
     this.readOnly = false,
+    this.backgroundColor,
+    this.textColor,
   });
 
   final String hintText;
@@ -28,6 +30,12 @@ class CustomTextFormField extends StatefulWidget {
   final Function(String)? onChanged;
   final VoidCallback? onTap;
   final bool readOnly;
+
+  /// Optional background color of the input field
+  final Color? backgroundColor;
+
+  /// Optional text color of the input field
+  final Color? textColor;
 
   @override
   State<CustomTextFormField> createState() => _CustomTextFormFieldState();
@@ -54,7 +62,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         onChanged: widget.onChanged,
         onTap: widget.onTap,
         readOnly: widget.readOnly,
-        style: AppStyles.f16Regular,
+        style: AppStyles.f16Regular.copyWith(
+          color: widget.textColor ?? Colors.black,
+        ),
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(
             vertical: 14.h,
@@ -63,7 +73,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           hintText: widget.hintText,
           labelText: widget.labelText,
           hintStyle: AppStyles.f14Regular.copyWith(color: AppColors.gray),
-          labelStyle: AppStyles.f14Regular,
+          labelStyle: AppStyles.f14Regular.copyWith(
+            color: widget.textColor ?? AppColors.black,
+          ),
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.obscureText
               ? Padding(
@@ -83,7 +95,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                 )
               : null,
           filled: true,
-          fillColor: AppColors.textFieldFillColor,
+          fillColor: widget.backgroundColor ?? AppColors.textFieldFillColor,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(18.r),
             borderSide: BorderSide.none,

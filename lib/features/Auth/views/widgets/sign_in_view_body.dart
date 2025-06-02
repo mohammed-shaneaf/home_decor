@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:home_decor/core/extensions/context_extensions.dart';
+import 'package:home_decor/core/themes/app_styles.dart';
 import 'package:home_decor/core/utils/custom_button.dart';
+import 'package:home_decor/features/Auth/views/forgot_password_view.dart';
 import 'package:home_decor/features/Auth/views/widgets/custom_auth_app_bar.dart';
 import 'package:home_decor/features/Auth/views/widgets/dont_have_account.dart';
 import 'package:home_decor/features/Auth/views/widgets/login_form_operation.dart';
@@ -33,6 +36,14 @@ class SignInViewBody extends StatelessWidget {
                 ),
                 50.verticalSpace,
                 DontHaveAnAccount(),
+                GestureDetector(
+                  onTap: () {
+                    context.push(ForgotPasswordView());
+                  },
+                  child: Center(
+                    child: Text('Forgot Password ? ', style: AppStyles.f14Bold),
+                  ),
+                ),
               ],
             ),
           ),
